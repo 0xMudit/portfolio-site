@@ -26,8 +26,8 @@ export const projects: Project[] = [
     tech: ["Go", "ISO 8583", "ISO 20022", "PostgreSQL", "Redis", "Docker", "HSM", "EMV"],
     metrics: ["Full switch + ledger", "Issuing + acquiring stacks", "HSM key management", "24/7 instant settlement"],
     image: "/assets/clara.png",
-    live: "https://github.com/0xMudit/clara-payment-network",
-    repo: "https://github.com/0xMudit/clara-payment-network",
+    live: "https://github.com/0xMudit/clara-card-network",
+    repo: "https://github.com/0xMudit/clara-card-network",
   },
   {
     title: "Malcom",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     metrics: ["Stripe-billed SaaS", "Streamed LLM responses", "Cited web research"],
     image: "/assets/malcom.png",
     live: "https://malcom-lake.vercel.app",
-    repo: "https://github.com/0xMudit/malcom-ai-research-assistant",
+    repo: "https://github.com/0xMudit/malcom-research-assistant",
   },
   {
     title: "Kingswork",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     metrics: ["Multi-domain backend", "JWT auth + WebSockets", "Backtesting + alerts"],
     image: "/assets/kingswork.png",
     live: "https://kingswork-ruddy.vercel.app",
-    repo: "https://github.com/0xMudit/kingswork-trading-intelligence",
+    repo: "https://github.com/0xMudit/kingswork-trading-platform",
   },
   {
     title: "Jini",
