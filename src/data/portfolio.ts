@@ -59,16 +59,6 @@ export const projects: Project[] = [
     live: "https://jini-document-intelligence.vercel.app",
     repo: "https://github.com/0xMudit/jini-document-intelligence",
   },
-  {
-    title: "Cattle Re-ID",
-    tag: "Applied ML / Computer Vision",
-    desc: "Identifying individual cattle from images — facial recognition, but for cows. Two complementary pipelines: a zero-shot OSNet approach that needs no training, and a supervised ViT-B/16 (HanwooReID) model over 514 identity classes, with YOLOv8 pose detecting 12 keypoints. Weights are published to HuggingFace and fetched automatically by a single download script.",
-    tech: ["Python", "PyTorch", "OSNet", "ViT-B/16", "YOLOv8", "HuggingFace"],
-    metrics: ["Zero-shot + supervised", "514 identity classes", "Weights on HuggingFace", "12-point pose"],
-    image: "/assets/cattle_reid.png",
-    live: "https://huggingface.co/0xmudit/cattle-reid-weights",
-    repo: "https://github.com/0xMudit/cattle-re-identification",
-  },
 ];
 
 export interface Job {
