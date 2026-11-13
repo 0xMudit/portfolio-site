@@ -201,5 +201,5 @@ The build favors a fast, quiet page over a heavy one:
 ## Deployment
 
 Pushes to `main` deploy automatically via Vercel (static output). The résumé at
-`public/assets/MudityaRaghav-Software-Engineer-Resume.pdf` is served directly, so updating it is a
+`public/assets/MudityaRaghav-Backend-Developer-Resume.pdf` is served directly, so updating it is a
 file replacement with no code change required.
