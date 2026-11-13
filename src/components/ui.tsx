@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 /* Shared page shell: one content width for the header, main, and footer. */
-export const container = "mx-auto w-full max-w-[49rem] px-5 sm:px-6";
+export const container = "mx-auto w-full max-w-[90rem] px-4 sm:px-6 lg:px-8";
 
 const buttonBase =
   "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition-colors";
