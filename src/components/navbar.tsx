@@ -11,7 +11,7 @@ import { navLinks, site } from "@/data/portfolio";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur-md">
-      <div className={`${container} flex h-14 items-center justify-between gap-4`}>
+      <div className={`${container} flex h-14 items-center justify-between gap-2 sm:gap-4`}>
         <a
           href="#top"
           className="text-[15px] font-semibold tracking-tight text-fg"
@@ -33,6 +33,13 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-1.5">
+          <a
+            href={site.phoneHref}
+            aria-label={`Call Muditya Raghav at ${site.phone}`}
+            className="inline-flex min-h-10 items-center whitespace-nowrap rounded-full border border-accent/25 bg-accent-soft px-3 text-[13px] font-semibold tabular-nums text-accent transition-colors hover:border-accent sm:text-sm"
+          >
+            {site.phone}
+          </a>
           <button
             type="button"
             data-theme-toggle
@@ -49,7 +56,7 @@ export default function Navbar() {
           <a
             href={site.resumeUrl}
             download
-            className={`${btnPrimary} ml-1 hidden h-9 px-3 text-[13px] sm:inline-flex`}
+            className={`${btnPrimary} ml-1 hidden h-9 px-3 text-[13px] lg:inline-flex`}
           >
             Resume
           </a>
@@ -74,7 +81,7 @@ export default function Navbar() {
                 <a
                   href={site.resumeUrl}
                   download
-                  className={`${btnPrimary} mt-2 sm:hidden`}
+                  className={`${btnPrimary} mt-2 lg:hidden`}
                 >
                   Download resume
                 </a>

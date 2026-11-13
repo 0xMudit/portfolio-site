@@ -12,6 +12,8 @@ export const site = {
   availability: "Open to backend & SDE I roles",
   startDate: "Available to join immediately",
   email: "mudityadev@gmail.com",
+  phone: "+91 87704 28132",
+  phoneHref: "tel:+918770428132",
   resumeUrl: "/assets/MudityaRaghav-Backend-Developer-Resume.pdf",
 } as const;
 
