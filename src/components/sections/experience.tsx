@@ -1,52 +1,38 @@
-import Reveal from "@/components/reveal";
-import { Card, Section, SectionHeading } from "@/components/ui";
-import { experience } from "@/data/portfolio";
+import { Section } from "@/components/ui";
+import { education, experience } from "@/data/portfolio";
 
 export default function Experience() {
   return (
-    <Section id="experience">
-      <SectionHeading
-        index="02"
-        title="Experience"
-        description="Four roles across product engineering, platform quality, and security — with the impact I owned at each."
-      />
+    <Section id="experience" title="Experience">
+      <ol className="space-y-10">
+        {experience.map((job) => (
+          <li key={`${job.company}-${job.period}`} className="grid gap-2 sm:grid-cols-[11rem_1fr] sm:gap-x-8">
+            <p className="font-mono text-[12px] leading-6 text-fg-faint">{job.period}</p>
 
-      <div className="relative space-y-4">
-        <span
-          aria-hidden
-          className="absolute top-4 bottom-4 left-[7px] w-px bg-gradient-to-b from-accent-500/60 via-zinc-200 to-transparent dark:via-white/10"
-        />
+            <div className="min-w-0">
+              <h3 className="text-[16px] font-semibold tracking-[-0.01em]">{job.role}</h3>
+              <p className="mt-0.5 text-sm text-fg-muted">{job.company}</p>
 
-        {experience.map((job, index) => (
-          <Reveal key={`${job.company}-${job.period}`} delay={index * 80} className="relative pl-8">
-            <span
-              aria-hidden
-              className="absolute top-7 left-0 h-[15px] w-[15px] rounded-full border-2 border-accent-500 bg-[#fafafa] dark:bg-[#09090b]"
-            />
-
-            <Card interactive className="p-5 sm:p-6">
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-50">{job.role}</h3>
-                <span className="rounded-full border border-zinc-200 px-2.5 py-0.5 font-mono text-[11px] text-zinc-500 dark:border-white/10 dark:text-zinc-400">
-                  {job.period}
-                </span>
-              </div>
-
-              <p className="mt-1.5 text-sm font-medium text-accent-600 dark:text-accent-400">
-                {job.company}
-              </p>
-
-              <ul className="mt-4 space-y-2">
+              <ul className="mt-3 space-y-1.5 text-[15px] leading-[1.65] text-fg-muted">
                 {job.bullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-3 text-[15px] text-zinc-600 dark:text-zinc-400">
-                    <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-600" />
+                  <li key={bullet} className="flex gap-2.5">
+                    <span aria-hidden className="mt-[0.65em] h-1 w-1 shrink-0 rounded-full bg-line-strong" />
                     <span>{bullet}</span>
                   </li>
                 ))}
               </ul>
-            </Card>
-          </Reveal>
+            </div>
+          </li>
         ))}
+      </ol>
+
+      <div className="mt-10 border-t border-line pt-6">
+        <p className="text-sm leading-[1.7] text-fg-muted">
+          <span className="font-medium text-fg">{education.degree}</span>
+          {" — "}
+          {education.school}
+          <span className="text-fg-faint"> · {education.detail}</span>
+        </p>
       </div>
     </Section>
   );

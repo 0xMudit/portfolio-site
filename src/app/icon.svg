@@ -4,12 +4,12 @@
     Monogram, drawn as stroked paths rather than <text> so the mark renders
     identically everywhere and the PNG fallbacks rasterise deterministically.
 
-    Geometry: 64x64 canvas, 14px corner radius, accent-600 (#4f46e5) ground.
+    Geometry: 64x64 canvas, 14px corner radius, accent (#2563eb) ground.
     Cap height 26 (y 19 to 45), stroke 5, so ink sits in x 11.5 to 52 and the
     gap between the two letterforms is 5 units, enough to stay separated when
     the icon is downscaled to 16px.
   -->
-  <rect width="64" height="64" rx="14" fill="#4f46e5"/>
+  <rect width="64" height="64" rx="14" fill="#2563eb"/>
 
   <g fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter"
      shape-rendering="geometricPrecision">

@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/lib/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -9,65 +8,83 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-jetbrains-mono",
-});
-
-const siteTitle = "Muditya Raghav — Software Engineer";
+const siteUrl = "https://mudityaraghav.vercel.app";
+const siteTitle = "Muditya Raghav — Backend Developer (Python, Go, FastAPI)";
 const siteDescription =
-  "I design and ship production systems end-to-end — a Mastercard-style payments switch in Go, a Stripe-billed AI research platform, and a real-time trading intelligence backend.";
+  "Backend developer building reliable systems with Python, Go, FastAPI, PostgreSQL, Redis, and Docker. Open to Backend Developer and SDE I opportunities.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mudityaraghav.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: siteTitle,
   description: siteDescription,
+  applicationName: "Muditya Raghav — Portfolio",
+  authors: [{ name: "Muditya Raghav", url: siteUrl }],
+  creator: "Muditya Raghav",
   keywords: [
     "Muditya Raghav",
+    "Backend Developer",
+    "SDE I",
     "Software Engineer",
-    "Backend Engineer",
-    "Full-Stack Engineer",
-    "Go",
     "Python",
-    "TypeScript",
-    "Payments",
-    "AWS",
+    "Go",
+    "FastAPI",
+    "PostgreSQL",
+    "Redis",
     "Docker",
+    "REST APIs",
+    "India",
   ],
-  authors: [{ name: "Muditya Raghav" }],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: siteTitle,
-    description: siteDescription,
     type: "website",
     url: "/",
     siteName: "Muditya Raghav",
-    images: [
-      {
-        url: "/assets/malcom.png",
-        width: 1200,
-        height: 630,
-        alt: siteTitle,
-      },
-    ],
+    title: siteTitle,
+    description: siteDescription,
+    locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/assets/malcom.png"],
+    creator: "@0xMudit",
   },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0b0d" },
   ],
 };
 
-/* Runs before first paint so a stored dark preference never flashes white. */
-const themeScript = `(function(){try{var s=localStorage.getItem("theme");var d=s==="dark"||(s!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d);}catch(e){}})();`;
+/**
+ * Pre-paint theme bootstrap + the only two behaviors on the page:
+ *  - the theme toggle (click on [data-theme-toggle])
+ *  - closing the <details> menu on Escape or after following a link
+ * Light is the default; only a stored dark choice is applied.
+ */
+const bootScript = `(function(){
+  try{if(localStorage.getItem("theme")==="dark"){document.documentElement.classList.add("dark");}}catch(e){}
+  document.addEventListener("click",function(e){
+    var t=e.target;
+    if(!t||!t.closest)return;
+    if(t.closest("[data-theme-toggle]")){
+      var r=document.documentElement,n=!r.classList.contains("dark");
+      r.classList.toggle("dark",n);
+      try{localStorage.setItem("theme",n?"dark":"light");}catch(e){}
+      return;
+    }
+    var m=document.querySelector("details[data-menu]");
+    if(m&&m.open&&t.closest("a")){m.open=false;}
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    var m=document.querySelector("details[data-menu]");
+    if(m){m.open=false;}
+  });
+})();`;
 
 export default function RootLayout({
   children,
@@ -75,13 +92,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
       </head>
-      <body className="antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
