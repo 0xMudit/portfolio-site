@@ -30,9 +30,9 @@ export default function Experience() {
       <div className="mt-10 border-t border-line pt-6">
         <p className="text-sm leading-[1.7] text-fg-muted">
           <span className="font-medium text-fg">{education.degree}</span>
-          {" â€” "}
+          {" — "}
           {education.school}
-          <span className="text-fg-faint"> Â· {education.detail}</span>
+          <span className="text-fg-faint"> · {education.detail}</span>
         </p>
       </div>
     </Section>

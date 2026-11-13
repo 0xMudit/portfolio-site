@@ -14,7 +14,7 @@ function ProjectRow({ project }: { project: Project }) {
         <p className="mt-3 text-[15px] leading-[1.7] text-fg-muted">{project.description}</p>
 
         <p className="mt-4 font-mono text-[12px] leading-relaxed text-fg-faint">
-          {project.stack.join("  Â·  ")}
+          {project.stack.join("  ·  ")}
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
