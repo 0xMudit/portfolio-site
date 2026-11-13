@@ -19,7 +19,7 @@ function ProjectRow({ project }: { project: Project }) {
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-          <a
+          {project.demo && <a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
@@ -27,7 +27,7 @@ function ProjectRow({ project }: { project: Project }) {
           >
             Live demo
             <ArrowUpRightIcon />
-          </a>
+          </a>}
           <a
             href={project.repo}
             target="_blank"
@@ -49,7 +49,7 @@ function ProjectRow({ project }: { project: Project }) {
           src={project.image}
           alt={project.imageAlt}
           fill
-          sizes="(min-width: 768px) 450px, 100vw"
+          sizes="(min-width: 1440px) 600px, (min-width: 768px) 45vw, 100vw"
           className="object-cover object-top transition-transform duration-300 hover:scale-[1.03]"
         />
       </div>
@@ -60,9 +60,9 @@ function ProjectRow({ project }: { project: Project }) {
 export default function Projects() {
   return (
     <Section id="projects" title="Selected projects">
-      <p className="mb-8 max-w-[34rem] text-sm leading-7 text-fg-muted">Independent projects with working demos, source code, and engineering decisions you can inspect.</p>
+      <p className="mb-8 max-w-[34rem] text-sm leading-7 text-fg-muted">Independent projects with source code, product screenshots, and engineering decisions you can inspect.</p>
       <div className="divide-y divide-line">
-        {[projects[1], projects[0], projects[2]].map((project) => (
+        {projects.map((project) => (
           <ProjectRow key={project.name} project={project} />
         ))}
       </div>

@@ -25,26 +25,25 @@ export interface Project {
   engineering: { title: string; detail: string }[];
   image: string;
   imageAlt: string;
-  demo: string;
+  demo?: string;
   repo: string;
 }
 
 export const projects: Project[] = [
   {
-    name: "Kingswork (KingStop)",
-    focus: "API design & real-time systems",
-    engineering: [
-      { title: "API boundaries", detail: "28 domain routers share a versioned /api/v1 surface, with OpenAPI documentation for exploring the backend." },
-      { title: "Identity & updates", detail: "JWT bearer authentication and bcrypt password hashing sit alongside WebSocket channels for live updates." },
-      { title: "Reproducible setup", detail: "SQLite and deterministic market fixtures let the paper-trading platform run without brokerage credentials or external API keys." },
-    ],
+    name: "RedSky Agents",
+    focus: "AI agent orchestration & desktop systems",
     description:
-      "A simulated trading platform, from market data to paper portfolios. I built the FastAPI backend with 28 domain routers, JWT authentication, and real-time WebSocket updates.",
-    stack: ["Python", "FastAPI", "SQLAlchemy", "WebSockets"],
-    image: "/assets/kingswork.png",
-    imageAlt: "Kingswork trading platform dashboard showing market data and a paper portfolio",
-    demo: "https://kingswork-ruddy.vercel.app",
-    repo: "https://github.com/0xMudit/kingswork-trading-platform",
+      "A local-first desktop app for AI teammates, built around OpenCode. Each agent has its own session, memory, workspace, and schedule, with live activity, file diffs, and approval checkpoints.",
+    stack: ["Electron", "React", "TypeScript", "Node.js", "OpenCode"],
+    engineering: [
+      { title: "Event-driven orchestration", detail: "The Electron main process supervises OpenCode and maps server-sent events to individual agent sessions, streaming replies and tool activity into the UI." },
+      { title: "Process boundaries", detail: "A context-isolated preload bridge exposes typed IPC calls to React; the renderer has Node integration disabled and does not call OpenCode directly." },
+      { title: "Persistent workflows", detail: "Local agent state and memory survive restarts. Scheduled routines, workspace diffs, and approval checkpoints make ongoing work inspectable." },
+    ],
+    image: "/assets/redsky-agents.png",
+    imageAlt: "RedSky Agents desktop dashboard with agent list, conversation thread, and live activity",
+    repo: "https://github.com/0xMudit/redsky-agents",
   },
   {
     name: "Clara Network",
@@ -61,6 +60,22 @@ export const projects: Project[] = [
     imageAlt: "Clara Network simulator interface showing authorization and ledger activity",
     demo: "https://clara-network.vercel.app",
     repo: "https://github.com/0xMudit/clara-card-network",
+  },
+  {
+    name: "Kingswork (KingStop)",
+    focus: "API design & real-time systems",
+    engineering: [
+      { title: "API boundaries", detail: "28 domain routers share a versioned /api/v1 surface, with OpenAPI documentation for exploring the backend." },
+      { title: "Identity & updates", detail: "JWT bearer authentication and bcrypt password hashing sit alongside WebSocket channels for live updates." },
+      { title: "Reproducible setup", detail: "SQLite and deterministic market fixtures let the paper-trading platform run without brokerage credentials or external API keys." },
+    ],
+    description:
+      "A simulated trading platform, from market data to paper portfolios. I built the FastAPI backend with 28 domain routers, JWT authentication, and real-time WebSocket updates.",
+    stack: ["Python", "FastAPI", "SQLAlchemy", "WebSockets"],
+    image: "/assets/kingswork.png",
+    imageAlt: "Kingswork trading platform dashboard showing market data and a paper portfolio",
+    demo: "https://kingswork-ruddy.vercel.app",
+    repo: "https://github.com/0xMudit/kingswork-trading-platform",
   },
   {
     name: "Malcom",
