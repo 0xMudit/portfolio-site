@@ -15,7 +15,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#ffffff",
+          backgroundColor: "#faf9f6",
           padding: "76px 80px",
           fontFamily: "sans-serif",
         }}
@@ -27,7 +27,7 @@ export default function OpengraphImage() {
               fontSize: 26,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              color: "#1d4ed8",
+              color: "#9a492d",
             }}
           >
             Backend Developer · Python · Go · FastAPI
@@ -57,7 +57,7 @@ export default function OpengraphImage() {
               color: "#52525b",
             }}
           >
-            I build backend systems that handle the edge cases.
+            Backend engineering. Built with a testing mindset.
           </div>
         </div>
 

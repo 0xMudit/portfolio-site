@@ -7,6 +7,7 @@ function ProjectRow({ project }: { project: Project }) {
   return (
     <article className="grid gap-6 py-10 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] md:gap-8">
       <div className="min-w-0">
+        <p className="mb-2 text-[11px] font-medium tracking-wide text-accent uppercase">{project.focus}</p>
         <h3 className="text-[18px] leading-snug font-semibold tracking-[-0.015em] sm:text-[19px]">
           {project.name}
         </h3>
@@ -34,9 +35,13 @@ function ProjectRow({ project }: { project: Project }) {
             className="inline-flex items-center gap-1.5 text-fg-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
           >
             <GithubIcon />
-            Source
+            Review code
           </a>
         </div>
+        <details className="engineering-notes mt-5 border-t border-line pt-4">
+          <summary className="flex cursor-pointer items-center justify-between gap-3 text-sm font-medium text-fg-muted hover:text-accent">Engineering decisions<span aria-hidden className="disclosure-mark text-lg">+</span></summary>
+          <dl className="mt-4 space-y-4">{project.engineering.map((note) => <div key={note.title}><dt className="text-xs font-semibold">{note.title}</dt><dd className="mt-1 text-[13px] leading-6 text-fg-muted">{note.detail}</dd></div>)}</dl>
+        </details>
       </div>
 
       <div className="project-preview relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-line bg-bg-subtle">
@@ -55,9 +60,9 @@ function ProjectRow({ project }: { project: Project }) {
 export default function Projects() {
   return (
     <Section id="projects" title="Selected projects">
-      <p className="mb-8 max-w-[34rem] text-sm leading-7 text-fg-muted">A few things I’ve built to understand how real systems work — from moving money to streaming answers.</p>
+      <p className="mb-8 max-w-[34rem] text-sm leading-7 text-fg-muted">Independent projects with working demos, source code, and engineering decisions you can inspect.</p>
       <div className="divide-y divide-line">
-        {projects.map((project) => (
+        {[projects[1], projects[0], projects[2]].map((project) => (
           <ProjectRow key={project.name} project={project} />
         ))}
       </div>

@@ -11,7 +11,7 @@ const inter = Inter({
 const siteUrl = "https://mudityaraghav.vercel.app";
 const siteTitle = "Muditya Raghav — Backend Developer (Python, Go, FastAPI)";
 const siteDescription =
-  "Backend developer building reliable systems with Python, Go, FastAPI, PostgreSQL, Redis, and Docker. Open to Backend Developer and SDE I opportunities.";
+  "Backend developer working in Python, Go, and FastAPI, with 15 months of QA experience at Reliance Jio Platforms. Explore payment, trading, and AI research projects.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: light)", color: "#faf9f6" },
     { media: "(prefers-color-scheme: dark)", color: "#0b0b0d" },
   ],
 };

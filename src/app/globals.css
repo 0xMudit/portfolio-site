@@ -37,8 +37,8 @@ html.dark {
   --color-line: #232328;
   --color-line-strong: #32323a;
   --color-accent: #efad8c;
-  --color-accent-solid: #2563eb;
-  --color-accent-solid-hover: #1e40af;
+  --color-accent-solid: #98472c;
+  --color-accent-solid-hover: #ad5535;
   --color-accent-soft: #16203a;
   --color-positive: #4ade80;
   color-scheme: dark;
@@ -150,3 +150,5 @@ details[data-menu][open] .menu-close {
 }
 
 .project-preview { align-self: center; box-shadow: 0 8px 24px rgb(0 0 0 / 0.04); }
+
+.engineering-notes[open] .disclosure-mark { transform: rotate(45deg); }
