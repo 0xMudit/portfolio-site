@@ -7,14 +7,14 @@ export default function Contact() {
   return (
     <Section id="contact" title="Contact">
       <h3 className="max-w-[34rem] text-[24px] leading-tight font-semibold tracking-[-0.02em] sm:text-[28px]">
-        Let&rsquo;s build something reliable.
+        Have a backend role in mind?
       </h3>
 
       <p className="mt-3 max-w-[36rem] text-[15px] leading-[1.7] text-fg-muted sm:text-base">
-        I&rsquo;m currently exploring Backend Developer and SDE I opportunities. If my work aligns
-        with what your team is building, I&rsquo;d be happy to connect.
+        I’d love to hear what your team is building. Send me a note — I’m available to join immediately.
       </p>
 
+      <a href={`mailto:${site.email}`} className="mt-6 inline-flex items-center gap-2 text-lg font-medium text-accent underline-offset-4 hover:underline">{site.email}<ArrowUpRightIcon /></a>
       <ul className="mt-8 divide-y divide-line border-y border-line">
         {profiles.map((profile) => {
           const external = profile.href.startsWith("http");

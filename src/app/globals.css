@@ -14,17 +14,17 @@
     sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f7f7f8;
+  --color-bg: #faf9f6;
+  --color-bg-subtle: #f0eee8;
   --color-fg: #101013;
   --color-fg-muted: #52525b;
   --color-fg-faint: #6b6b75;
   --color-line: #e6e6e9;
   --color-line-strong: #d2d2d8;
-  --color-accent: #1d4ed8;
-  --color-accent-solid: #2563eb;
-  --color-accent-solid-hover: #1d4ed8;
-  --color-accent-soft: #eff4ff;
+  --color-accent: #9a492d;
+  --color-accent-solid: #98472c;
+  --color-accent-solid-hover: #7d3822;
+  --color-accent-soft: #f6ebe4;
   --color-positive: #15803d;
 }
 
@@ -36,7 +36,7 @@ html.dark {
   --color-fg-faint: #8b8b95;
   --color-line: #232328;
   --color-line-strong: #32323a;
-  --color-accent: #8fb6ff;
+  --color-accent: #efad8c;
   --color-accent-solid: #2563eb;
   --color-accent-solid-hover: #1e40af;
   --color-accent-soft: #16203a;
@@ -148,3 +148,5 @@ details[data-menu][open] .menu-open {
 details[data-menu][open] .menu-close {
   display: block;
 }
+
+.project-preview { align-self: center; box-shadow: 0 8px 24px rgb(0 0 0 / 0.04); }

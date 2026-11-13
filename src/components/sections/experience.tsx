@@ -4,9 +4,10 @@ import { education, experience } from "@/data/portfolio";
 export default function Experience() {
   return (
     <Section id="experience" title="Experience">
+      <p className="mb-8 text-sm leading-7 text-fg-muted">My background in QA taught me to think about what can break. I bring that mindset to everything I build.</p>
       <ol className="space-y-10">
         {experience.map((job) => (
-          <li key={`${job.company}-${job.period}`} className="grid gap-2 sm:grid-cols-[11rem_1fr] sm:gap-x-8">
+          <li key={`${job.company}-${job.period}`} className="grid gap-2 sm:grid-cols-[10rem_1fr] sm:gap-x-8">
             <p className="font-mono text-[12px] leading-6 text-fg-faint">{job.period}</p>
 
             <div className="min-w-0">
@@ -29,9 +30,9 @@ export default function Experience() {
       <div className="mt-10 border-t border-line pt-6">
         <p className="text-sm leading-[1.7] text-fg-muted">
           <span className="font-medium text-fg">{education.degree}</span>
-          {" — "}
+          {" â€” "}
           {education.school}
-          <span className="text-fg-faint"> · {education.detail}</span>
+          <span className="text-fg-faint"> Â· {education.detail}</span>
         </p>
       </div>
     </Section>

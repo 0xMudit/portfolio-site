@@ -6,10 +6,10 @@
 export const site = {
   name: "Muditya Raghav",
   identity: "Backend Developer · Python · Go · FastAPI",
-  headline: "I build backend systems that handle the edge cases.",
+  headline: "Behind every smooth experience, there’s a backend that works.",
   summary:
-    "Backend-focused engineer with 15 months of QA automation experience at Reliance Jio Platforms. I build independent backend applications using Python, Go, FastAPI, PostgreSQL, Redis, and Docker, with a focus on reliability, API design, and data integrity.",
-  availability: "Open to Backend Developer / SDE I opportunities",
+    "I’m Muditya, a backend developer working with Python and Go. From trading APIs to payment simulators, I like building the parts you don’t see — and making sure they hold up.",
+  availability: "Open to backend & SDE I roles",
   startDate: "Available to join immediately",
   email: "mudityadev@gmail.com",
   resumeUrl: "/assets/MudityaRaghav-Backend-Developer-Resume.pdf",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
   {
     name: "Kingswork (KingStop)",
     description:
-      "Built a modular FastAPI backend for a simulated trading platform with 28 domain routers, versioned REST APIs, JWT authentication, real-time WebSocket updates, paper portfolios, and backtesting workflows.",
+      "A simulated trading platform, from market data to paper portfolios. I built the FastAPI backend with 28 domain routers, JWT authentication, and real-time WebSocket updates.",
     stack: ["Python", "FastAPI", "SQLAlchemy", "WebSockets"],
     image: "/assets/kingswork.png",
     imageAlt: "Kingswork trading platform dashboard showing market data and a paper portfolio",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     name: "Clara Network",
     description:
-      "Developed an educational payment-network simulator featuring ISO 8583 authorization routing, issuer failover, idempotent transaction processing, an append-only double-entry ledger, and reconciliation workflows.",
+      "What happens after you swipe a card? An educational payment simulator I built in Go, with authorization routing, issuer failover, and a double-entry ledger that keeps transactions consistent.",
     stack: ["Go", "PostgreSQL", "Redis", "Docker"],
     image: "/assets/clara.png",
     imageAlt: "Clara Network simulator interface showing authorization and ledger activity",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     name: "Malcom",
     description:
-      "Built an AI research application with streamed responses, document-grounded research, persistent sessions, authentication, and subscription billing workflows.",
+      "An AI research workspace that turns documents into grounded answers. Built with streaming responses, persistent research sessions, authentication, and subscription billing.",
     stack: ["Next.js", "TypeScript", "Supabase", "Stripe"],
     image: "/assets/malcom.png",
     imageAlt: "Malcom research assistant interface with streamed answers and cited sources",

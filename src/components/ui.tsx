@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 
 /* Shared page shell: one content width for the header, main, and footer. */
-export const container = "mx-auto w-full max-w-[60rem] px-5 sm:px-6";
+export const container = "mx-auto w-full max-w-[49rem] px-5 sm:px-6";
 
 const buttonBase =
-  "inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors";
+  "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition-colors";
 
 export const btnPrimary = `${buttonBase} bg-accent-solid text-white hover:bg-accent-solid-hover`;
 
@@ -28,9 +28,9 @@ export function Section({
     <section
       id={id}
       aria-labelledby={`${id}-title`}
-      className="scroll-mt-20 border-t border-line py-16 sm:py-20"
+      className="scroll-mt-20 border-t border-line py-12 sm:py-16"
     >
-      <div className="mb-8 flex items-center gap-4 sm:mb-10">
+      <div className="mb-7 flex items-center gap-4 sm:mb-8">
         <h2
           id={`${id}-title`}
           className="text-[12px] font-semibold tracking-[0.16em] text-fg-muted uppercase"

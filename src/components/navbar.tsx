@@ -17,7 +17,7 @@ export default function Navbar() {
           className="text-[15px] font-semibold tracking-tight text-fg"
           aria-label="Muditya Raghav, back to top"
         >
-          {site.name}
+          <span className="font-mono text-sm">mr<span className="text-accent">.</span></span>
         </a>
 
         <nav aria-label="Primary" className="hidden items-center gap-6 md:flex">

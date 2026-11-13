@@ -12,7 +12,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {site.name}
         </p>
         <p className="flex items-center gap-4">
-          <span>Built with Next.js and Tailwind CSS</span>
+          <span>Thanks for stopping by.</span>
           <a
             href="#top"
             className="inline-flex items-center gap-1.5 text-fg-muted transition-colors hover:text-fg"
